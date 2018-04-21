@@ -53,6 +53,10 @@ def find_virtualenvs(paths):
         if not os.path.isdir(path):
             logger.warning("{} is not a directory. Path ignored.".format(path))
             continue
+        # If the root path contains a virtualenv add it to virtualenvs list
+        if is_virtualenv(path):
+            virtualenvs.append(path)
+
         subdirs = filter(os.path.isdir, (os.path.join(path, name) for name in os.listdir(path)))
         virtualenvs += sorted(filter(is_virtualenv, subdirs))
     return virtualenvs
@@ -64,7 +68,8 @@ def is_virtualenv(path):
     Assumes that any directory with a "./bin/activate" is a valid virtualenv.
     """
     try:
-        return os.path.isfile(os.path.join(path, BINDIR, ACTIVATE_SCRIPT))
+        activate_script_path = os.path.join(path, BINDIR, ACTIVATE_SCRIPT)
+        return os.path.isfile(activate_script_path)
     except IOError:
         return False
 
