@@ -23,13 +23,22 @@ Only Sublime Text 3. Tested in Linux and Windows but it should work in OS X as w
 
 ## Installation
 
-Install through Package Control as usual:
+Install through Package Control by first adding this repository:
 
-1. Open command palette through the menu or with `Ctrl+Shift+P`.
-2. Select `Package Control: Install Package`.
-3. Search _Virtualenv_ and press enter.
+1. Open the command palette
+2. Select `Package Control: Add Repository`
+3. Enter `https://github.com/Stack-of-Pancakes/st-python-virtualenv` when prompted
+4. Open the command palette again
+5. Select `Package Control: Install Package`
+6. Select `st-python-virtualenv`
 
-Detailed instructions [here][packageControl].
+Or download zip and place it in your packages folder
+
+1. Open your packages folder. Menu item Preferences -> Browse Packages...
+2. Place this repository in that folder one of two ways
+    a Clone this repository into it's own folder
+    b Download this repository as a zip and place it into the folder
+3. Sublime Text should load the package on it's next run
 
 
 ## Usage
