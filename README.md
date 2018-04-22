@@ -1,5 +1,7 @@
-Sublime Text - Virtualenv
+Python Virtualenv for Sublime Text
 =========================
+
+Ported from the abandoned [Sublime Text - Virtualenv][https://github.com/AdrianLC/sublime-text-virtualenv].
 
 Manage your virtualenvs directly from Sublime Text __3__.
 
