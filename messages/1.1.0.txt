@@ -1,4 +1,4 @@
-Virtualenv 1.1.3
+Virtualenv 1.1.0
 ================
 
 - Fixed an issue where virtualenvs that were in the root folder of the currently opened folders
